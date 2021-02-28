@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Title</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css" integrity="sha512-6qkvBbDyl5TDJtNJiC8foyEVuB6gxMBkrKy67XpqnIDxyvLLPJzmTjAj1dRJfNdmXWqD10VbJoeN4pOQqDwvRA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/keyboards.css">
+</head>
+<body>
+<div class="container">
+    <div class="wrapper">
+        <div class="menu">
+            <select name="language" id="language">
+                <option value="Ru">Russian</option>
+                <option value="En">English</option>
+            </select>
+            <button class="refresh" id="refresh">&#8635;</button>
+            <span id="timer"></span>
+            <span id="speed">180 символов в минуту</span>
+        </div>
+
+        <div class="text" id="text">
+        </div>
+
+        <div class="keyboard">
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key backspace" id="backspace">
+                <div class="key-text"></div>
+            </div>
+            <div class="key tab" id="tab">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key long">
+                <div class="key-text"></div>
+            </div>
+            <div class="key capslock" id="capslock">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key enter" id="enter">
+                <div class="key-text"></div>
+            </div>
+            <div class="key LShift" id="LShift">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key RShift" id="RShift">
+                <div class="key-text"></div>
+            </div>
+            <div class="key LCtrl" id="LCtrl">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key space" id="space">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key">
+                <div class="key-text"></div>
+            </div>
+            <div class="key RCtrl" id="RCtrl">
+                <div class="key-text"></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js" integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A==" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+.backspace {
+    width: 99px;
+    height: 40px;
+}
+
+.tab {
+    width: 53px;
+    height: 40px;
+}
+
+.capslock {
+    width: 65px;
+    height: 40px;
+}
+
+.enter {
+    width: 118px;
+}
+
+.LShift {
+    width: 55px;
+    height: 40px;
+}
+
+.RShift {
+    width: 128px;
+    height: 40px;
+}
+
+.LCtrl {
+    width: 65px;
+    height: 40px;
+}
+
+.space {
+    width: 269px;
+}
+
+.RCtrl {
+    width: 75px;
+    height: 40px;
+}
