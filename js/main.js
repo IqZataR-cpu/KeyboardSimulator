@@ -3,7 +3,7 @@ const KEYBOARD_RU = [
     "&#11134;", "Й", "Ц", "У", "К", "Е", "Н", "Г", "Ш", "Щ", "З", "Х", "Ъ", "\\",
     "Caps", "Ф", "Ы", "В", "А", "П", "Р", "О", "Л", "Д", "Ж", "Э", "enter",
     "Shift", "\\", "Я", "Ч", "С", "М", "И", "Т", "Ь", "Б", "Ю", ".,", "shift",
-    "Ctrl", "Fn", "St", "Alt", "----", "Alt", "Fn", "&#129695;", "Ctrl"
+    "Ctrl", "Fn", "St", "Alt", "____", "Alt", "Fn", "&#129695;", "Ctrl"
 ]
 
 const KEYBOARD_EN = [
@@ -11,7 +11,7 @@ const KEYBOARD_EN = [
     "&#11134;", "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P", "[", "]", "\\",
     "Caps", "A", "S", "D", "F", "G", "H", "J", "K", "L", ";", "'", "enter",
     "Shift", "\\", "Z", "X", "C", "V", "B", "N", "M", ",", ".", "/", "shift",
-    "Ctrl", "Fn", "St", "Alt", "----", "Alt", "Fn", "&#129695;", "Ctrl"
+    "Ctrl", "Fn", "St", "Alt", "____", "Alt", "Fn", "&#129695;", "Ctrl"
 ]
 
 const TEXTS_RU = {
@@ -71,13 +71,27 @@ let getText = (id, lang) => {
     return LANGUAGES[lang].texts[id];
 }
 
+function translateToKeyboardCode(symbol) {
+    if (symbol == " ")
+    {
+        return "____";
+    }
+
+    if (symbol == "." || symbol == ",") {
+        return ".,"
+    }
+
+    return symbol.toUpperCase();
+}
+
 function setNeedToPress() {
     let previousHint = document.querySelector('.need-to-press');
 
     if (previousHint)
         previousHint.classList.remove('need-to-press');
 
-    KEYS[currentPosition].parentElement.classList.add('need-to-press')
+    let index = LANGUAGES[getLang()].keyboard.indexOf(translateToKeyboardCode(currentText[currentPosition]));
+    KEYS[index].parentElement.classList.add('need-to-press')
 }
 
 let setText = () => {
