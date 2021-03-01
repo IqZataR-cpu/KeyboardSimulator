@@ -105,6 +105,8 @@ let setText = () => {
         }
     }
 
+    totalTime = 0;
+    lastTime = 0;
     currentText = getText(currentTextId, getLang())
     currentPosition = 0;
     textWrapper.innerHTML = "";
